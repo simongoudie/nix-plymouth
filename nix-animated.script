@@ -24,8 +24,10 @@ if (animation_images[1]) {
 }
 
 # Set background colour
-Window.SetBackgroundTopColor (0.05, 0.05, 0.09);
-Window.SetBackgroundBottomColor (0.05, 0.05, 0.09);
+Window.SetBackgroundTopColor (1, 1, 1);
+Window.SetBackgroundBottomColor (1, 1, 1);
+#Window.SetBackgroundTopColor (0.05, 0.05, 0.09);
+#Window.SetBackgroundBottomColor (0.05, 0.05, 0.09);
 
 # Set initial image
 animation_sprite.SetImage(animation_images[1]);
