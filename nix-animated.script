@@ -9,6 +9,13 @@ for (i = 1; i <= 98; i++) {
 screen_width = Window.GetWidth();
 screen_height = Window.GetHeight();
 
+# Create dark purple background box
+# Create a 1-pixel image and scale it to fill screen
+background_image = Image.Text(" ", 0.05, 0.05, 0.09, 1);  # dark purple, alpha 1
+background_sprite = Sprite();
+background_sprite.SetImage(background_image.Scale(screen_width, screen_height));
+background_sprite.SetPosition(0, 0, -100);  # z-index -100 (behind everything)
+
 # Animation settings
 num_frames = 98;
 current_frame = 0;
@@ -21,11 +28,10 @@ if (animation_images[1]) {
     image_height = animation_images[1].GetHeight();
     animation_sprite.SetX(screen_width / 2 - image_width / 2);
     animation_sprite.SetY(screen_height / 2 - image_height / 2);
+    animation_sprite.SetZ(10);  # z-index 10 (in front of background)
 }
 
 # Set background colour
-Window.SetBackgroundTopColor (1, 1, 1);
-Window.SetBackgroundBottomColor (1, 1, 1);
 #Window.SetBackgroundTopColor (0.05, 0.05, 0.09);
 #Window.SetBackgroundBottomColor (0.05, 0.05, 0.09);
 
