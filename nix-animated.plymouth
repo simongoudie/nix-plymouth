@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=NixOS Animated
+Description=Animated boot screen for NixOS
+ModuleName=script
+
+[script]
+ImageDir=/run/current-system/sw/share/plymouth/themes/nix-animated
+ScriptFile=/run/current-system/sw/share/plymouth/themes/nix-animated/nix-animated.script
