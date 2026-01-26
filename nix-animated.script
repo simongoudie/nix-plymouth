@@ -23,6 +23,10 @@ if (animation_images[1]) {
     animation_sprite.SetY(screen_height / 2 - image_height / 2);
 }
 
+# Set background colour
+Window.SetBackgroundTopColor (0.051, 0.047, 0.086);
+Window.SetBackgroundBottomColor (0.051, 0.047, 0.086);
+
 # Set initial image
 animation_sprite.SetImage(animation_images[1]);
 
