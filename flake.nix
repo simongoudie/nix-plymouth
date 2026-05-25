@@ -56,7 +56,7 @@
           boot.plymouth = {
             enable = true;
             theme = "nix-animated";
-            themePackages = [ self.packages.${pkgs.system}.default ];
+            themePackages = [ self.packages.${pkgs.stdenv.hostPlatform.system}.default ];
           };
         };
       };
